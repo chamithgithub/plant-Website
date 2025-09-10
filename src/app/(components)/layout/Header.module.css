@@ -1,0 +1,138 @@
+/* Header.module.css */
+.header {
+   background: linear-gradient(to right, #2d5016, #4a7229);
+   color: white;
+   padding: 1rem 2rem;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   position: sticky;
+   top: 0;
+   z-index: 100;
+ }
+ 
+ .nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1200px;
+   margin: 0 auto;
+   position: relative;
+ }
+ 
+ .logo {
+   font-size: 1.8rem;
+   font-weight: 700;
+   display: flex;
+   align-items: center;
+ }
+ 
+ .logoIcon {
+   margin-right: 0.5rem;
+   color: #86efac;
+ }
+ 
+ .navLinks {
+   display: flex;
+   list-style: none;
+ }
+ 
+ .navLinks li {
+   margin-left: 2rem;
+ }
+ 
+ .navLinks a {
+   color: white;
+   text-decoration: none;
+   font-weight: 500;
+   transition: color 0.3s;
+   display: flex;
+   align-items: center;
+ }
+ 
+ .navLinks a:hover {
+   color: #86efac;
+ }
+ 
+ .navLinks i {
+   margin-right: 0.5rem;
+ }
+ 
+ /* Hamburger menu */
+ .hamburger {
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+   padding: 5px;
+ }
+ 
+ .hamburger span {
+   width: 25px;
+   height: 3px;
+   background: white;
+   margin-bottom: 4px;
+   border-radius: 2px;
+   transition: all 0.3s ease;
+ }
+ 
+ /* Mobile navigation */
+ .mobileNav {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 100%;
+   background: linear-gradient(to bottom, #2d5016, #4a7229);
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   z-index: 99;
+   transform: translateY(-10px);
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease;
+ }
+ 
+ .mobileNav.open {
+   transform: translateY(0);
+   opacity: 1;
+   visibility: visible;
+ }
+ 
+ .mobileNav ul {
+   list-style: none;
+   padding: 1rem 0;
+ }
+ 
+ .mobileNav li {
+   margin: 0;
+ }
+ 
+ .mobileNav a {
+   display: block;
+   padding: 1rem 2rem;
+   color: white;
+   text-decoration: none;
+   font-weight: 500;
+   transition: background-color 0.3s;
+ }
+ 
+ .mobileNav a:hover {
+   background-color: rgba(255, 255, 255, 0.1);
+ }
+ 
+ /* Responsive styles */
+ @media (max-width: 768px) {
+   .hamburger {
+     display: flex;
+   }
+   
+   .navLinks {
+     display: none;
+   }
+   
+   .mobileNav {
+     display: block;
+   }
+ }
+ 
+ /* Prevent body scrolling when menu is open */
+ .noScroll {
+   overflow: hidden;
+ }
